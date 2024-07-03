@@ -1,4 +1,5 @@
 "use client"
+import { useEffect } from "react";
 import AlgoSelectorComponent from "./components/algoSelector.component";
 import AlogDescriptionComponent from "./components/alogDescription.component";
 import AlogInputComponent from "./components/alogInput.component";
@@ -8,28 +9,34 @@ import TitleComponent from "./components/title.component";
 import { useAlgoVisualizerContext } from "./context/visualizer";
 
 const Home = () => {
-  const {arrayToSort} = useAlgoVisualizerContext();
-  return(
+  const { arrayToSort, resetArrayAndAnimation } = useAlgoVisualizerContext();
+
+  useEffect(() => {
+    resetArrayAndAnimation();
+  }, [])
+
+  return (
     <div className=" px-7 ">
       {/* for title section */}
       <div className=" flex flex-row  justify-between py-5">
-        <TitleComponent/>
+        <TitleComponent />
         <div className="flex flex-row">
-          <SpeedControllerComponent/>
-          <AlgoSelectorComponent/>
+          <SpeedControllerComponent />
+          <AlgoSelectorComponent />
         </div>
       </div>
       {/* algo desc section*/}
       <div>
-        {/* <AlogDescriptionComponent/> */}
+        <AlogDescriptionComponent />
       </div>
       {/* algo inputs section */}
       <div>
-        {/* <AlogInputComponent/> */}
+        <AlogInputComponent/>
       </div>
       {/* graph section */}
-      <div>
-        <GraphComponent/>
+      <div className=" flex">
+        
+        <GraphComponent />
       </div>
     </div>
   )

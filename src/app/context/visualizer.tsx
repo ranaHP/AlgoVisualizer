@@ -34,8 +34,8 @@ const generateRandomArray = (size: number, min: number, max: number): number[] =
 }
 
 export const AlgoVisualizerProvider = ({children}: {children: React.ReactNode}) => {
-    const [arrayToSort, setArrayToSort] = useState<number[]>([8,1,9,2,3]);
-    const [selectedAlgo, setSelectedAlgo] = useState<AlgoType>('bubble');
+    const [arrayToSort, setArrayToSort] = useState<number[]>([]);
+    const [selectedAlgo, setSelectedAlgo] = useState<AlgoType>('Bubble');
     const [isSorting, setIsSorting] = useState<boolean>(false);
     const [animationSpeed, setAnimationSpeed] = useState<number>(MAX_ANIMATION_SPEED);
     const [isAnimationComplete, setIsAnimationComplete] = useState<boolean>(false);
