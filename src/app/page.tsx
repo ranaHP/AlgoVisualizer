@@ -16,7 +16,7 @@ const Home = () => {
   }, [])
 
   return (
-    <div className=" px-7 ">
+    <div className=" px-7 flex gap-2 flex-col">
       {/* for title section */}
       <div className=" flex flex-row  justify-between py-5">
         <TitleComponent />
@@ -31,11 +31,10 @@ const Home = () => {
       </div>
       {/* algo inputs section */}
       <div>
-        <AlogInputComponent/>
       </div>
       {/* graph section */}
-      <div className=" flex">
-        
+      <div className=" flex justify-around gap-4">
+        <AlogInputComponent />
         <GraphComponent />
       </div>
     </div>
