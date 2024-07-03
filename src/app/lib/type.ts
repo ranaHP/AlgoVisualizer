@@ -1,7 +1,7 @@
 export type AlgoType = 
-| 'bubble'
-| 'insertioin'
-| 'selection'
-| 'merge'
-| 'quick'
-| 'heapSort'
+| 'Bubble'
+| 'Insertioin'
+| 'Selection'
+| 'Merge'
+| 'Quick'
+| 'HeapSort'
