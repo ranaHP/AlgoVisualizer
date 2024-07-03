@@ -4,3 +4,4 @@ export type AlgoType =
 | 'selection'
 | 'merge'
 | 'quick'
+| 'heapSort'

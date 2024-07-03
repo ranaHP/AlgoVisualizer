@@ -30,7 +30,7 @@ const AlgoVisualizerContext = createContext<AlgoVisualizerContextType | null>(nu
 */
 
 const generateRandomArray = (size: number, min: number, max: number): number[] => {
-    return Array.from({length: 10}, () => Math.floor(Math.random() * (max - min + 1)) + min);
+    return Array.from({length: 20}, () => Math.floor(Math.random() * (max - min + 1)) + min);
 }
 
 export const AlgoVisualizerProvider = ({children}: {children: React.ReactNode}) => {
